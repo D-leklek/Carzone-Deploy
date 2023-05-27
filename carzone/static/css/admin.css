@@ -1,7 +1,11 @@
 #header{
-    background-color: #fff !important;
+    background-color: rgb(46, 138, 103) !important;
     color: #ff0000 !important;
     box-shadow: 0px 0px 3px 0px #ff0000;
+}
+
+#header a:link, #header a:visited, #logout-form button {
+    color: #000 !important;
 }
 
 a:link, a:visited {

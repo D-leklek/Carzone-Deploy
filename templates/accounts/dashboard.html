@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block title %} | Dashboard {% endblock %}
+
+{% load static %}
+{% block content %}
+<!-- Sub banner start -->
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>Dashboard</h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="active">Username</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
+
+<!--   Dashboard Start   -->
+
+<div class="container mt-50 mb-50">
+	{% include 'includes/messages.html' %}
+	<div class="main-title" style="text-align:left !important;">
+            <h1>Welcome <span>User</span></h1>
+            <p>Here are the cars that you have inquired about</p>
+        </div>
+	<table class="table table-hover">
+	  <thead>
+		<tr>
+		  <th scope="col">#</th>
+		  <th scope="col">Car Name</th>
+		  <th scope="col">Location</th>
+		  <th scope="col">Price</th>
+		  <th scope="col">Action</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <th scope="row">1</th>
+		  <td>Lamborgini Huracan</td>
+		  <td>Austin</td>
+		  <td>$25000</td>
+		  <td><a href="#" class="btn btn-outline-dark">View Car</a></td>
+		</tr>
+		<tr>
+		  <th scope="row">2</th>
+		  <td>Lamborgini Huracan</td>
+		  <td>Austin</td>
+		  <td>$25000</td>
+		  <td><a href="#" class="btn btn-outline-dark">View Car</a></td>
+		</tr>
+		<tr>
+		  <th scope="row">3</th>
+		  <td>Lamborgini Huracan</td>
+		  <td>Austin</td>
+		  <td>$25000</td>
+		  <td><a href="#" class="btn btn-outline-dark">View Car</a></td>
+		</tr>
+	  </tbody>
+	</table>
+</div>
+
+<!--   Dashboard End   -->
+
+
+<!-- Footer start -->
+<footer class="footer">
+    
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="copy">© 2020 <a href="#">Carzone Corp.</a> All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="social-list-2">
+                        <ul>
+                            <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer end -->
+
+{% endblock %}
