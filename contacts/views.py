@@ -17,7 +17,7 @@ def inquiry(request):
         state = request.POST['state']
         email = request.POST['email']
         phone = request.POST['phone']
-        message = request.POST['message']
+        message = request.POST['message']        
 
         if request.user.is_authenticated:
             user_id = request.user.id
@@ -33,7 +33,7 @@ def inquiry(request):
         admin_email = admin_info.email
 
         send_mail(
-           "New Car Inquiry",
+            "New Car Inquiry",
             "You have a new inquiry for the car" + car_title + ". Please login to you admin panel for more info.",
             "ipathsaid@gmail.com",
             [admin_email],

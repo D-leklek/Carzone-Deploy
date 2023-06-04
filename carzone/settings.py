@@ -11,7 +11,12 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-from tkinter import E
+
+import environ
+env = environ.Env()
+environ.Env.read_env()
+
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,12 +26,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5-hng!8v*etu^8&l9ruzum#303_x(^mapbp0(2=n#^ulsowo#('
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 LOGIN_REDIRECT_URL = 'dashboard'
 # Application definition
@@ -84,19 +89,27 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'carzone.wsgi.application'
+#$gunicorn app:app
+#$gunicorn carzone.wsgi:application
 
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'carzone_db_1',
+#        'USER': 'postgres',
+#        'PASSWORD': 'Toom007a',
+#        'HOST': 'localhost',
+#     }
+# }
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'carzone_db_1',
-        'USER': 'postgres',
-        'PASSWORD': 'Toom007a',
-        'HOST': 'localhost',
-    }
+    'default':
+    dj_database_url.parse(env('DATABASE_URL'))
 }
 
 
@@ -158,7 +171,7 @@ SOCIALACCOUNT_LOGIN_ON_GET = True
 
 #Email Setting
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_POST = 587
+EMAIL_PORT = 587
 EMAIL_HOST_USER = 'ipathsaid@gmail.com'
 EMAIL_HOST_PASSWORD = 'tfwgidmpdosbdwgw'
 EMAIL_USE_TLS = True
