@@ -190,6 +190,62 @@
     }
 },
 {
+    "model": "pages.team",
+    "pk": 1,
+    "fields": {
+        "first_name": "Martin",
+        "last_name": "Smith",
+        "designation": "Web Developer",
+        "photo": "photos/2023/59/15/avatar-10.jpg",
+        "facebook_link": "https://facebook.com",
+        "twitter_link": "https://twitter.com",
+        "google_plus_link": "https://google.com",
+        "created_date": "2023-04-14T23:59:33.773Z"
+    }
+},
+{
+    "model": "pages.team",
+    "pk": 2,
+    "fields": {
+        "first_name": "Carolyn",
+        "last_name": "Stone",
+        "designation": "Creative Director",
+        "photo": "photos/2023/00/15/avatar-11.jpg",
+        "facebook_link": "https://facebook.com",
+        "twitter_link": "https://twitter.com",
+        "google_plus_link": "https://google.com",
+        "created_date": "2023-04-15T00:00:09.927Z"
+    }
+},
+{
+    "model": "pages.team",
+    "pk": 3,
+    "fields": {
+        "first_name": "Brandon",
+        "last_name": "Miller",
+        "designation": "Manager",
+        "photo": "photos/2023/00/15/avatar-12.jpg",
+        "facebook_link": "https://facebook.com",
+        "twitter_link": "https://twitter.com",
+        "google_plus_link": "https://google.com",
+        "created_date": "2023-04-15T00:00:38.546Z"
+    }
+},
+{
+    "model": "pages.team",
+    "pk": 4,
+    "fields": {
+        "first_name": "Michelle",
+        "last_name": "Nelson",
+        "designation": "Support Manager",
+        "photo": "photos/2023/01/15/avatar-9.jpg",
+        "facebook_link": "https://facebook.com",
+        "twitter_link": "https://twitter.com",
+        "google_plus_link": "https://google.com",
+        "created_date": "2023-04-15T00:01:11.053Z"
+    }
+},
+{
     "model": "auth.user",
     "fields": {
         "password": "pbkdf2_sha256$390000$sV6M9jn7Mu8eHBGJIr8uoL$4wQ+BTiw6tuPbmnj/W4vvgY5IBVI2lL3La44mcgBRoc=",
